@@ -363,6 +363,7 @@ func TestMCPRouteController_syncMCPRouteSecurityPolicy(t *testing.T) {
 			wantJWT:       true,
 			wantBTP:       true,
 			wantFilter:    true,
+			wantIssuer:    server.URL,
 			wantJWKS:      &egv1a1.RemoteJWKS{URI: server.URL + "/.well-known/jwks.json"},
 			wantMergeType: ptr.To(egv1a1.StrategicMerge),
 			wantBTPMerge:  ptr.To(egv1a1.StrategicMerge),
